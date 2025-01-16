@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Data</title>
+</head>
+<body>
+    <h1>Predict Data</h1>
+    <form action="{{ url_for('prediction') }}" method="POST">
+        <!-- 9 Input Fields -->
+        <div>
+            <input type="text" name="Temperature" placeholder="Temperature" required>
+        </div>
+        <div>
+            <input type="text" name="RH" placeholder="RH" required>
+        </div>
+        <div>
+            <input type="text" name="Ws" placeholder="Ws" required>
+        </div>
+        <div>
+            <input type="text" name="Rain" placeholder="Rain" required>
+        </div>
+        <div>
+            <input type="text" name="FFMC" placeholder="FFMC" required>
+        </div>
+        <div>
+            <input type="text" name="DMC" placeholder="DMC" required>
+        </div>
+        <div>
+            <input type="text" name="ISI" placeholder="ISI" required>
+        </div>
+        <div>
+            <input type="text" name="Classes" placeholder="Classes" required>
+        </div>
+        <div>
+            <input type="text" name="region" placeholder="Region" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <h2>
+        PREDICTION: {{ results }}
+    </h2>
+
+</body>
+</html>
